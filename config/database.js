@@ -6,8 +6,8 @@ config();
 // Ensure the storage path is writable in the Vercel environment
 const storagePath = process.env.DB_PATH || '/tmp/database.sqlite';
 
-// Manually configure the SQLite3 module
-const sqlite3 = require('sqlite3').verbose();
+// Dynamically import sqlite3 (since it does not natively support ES modules)
+const sqlite3 = await import('sqlite3').then(module => module.default || module);
 
 // Initialize Sequelize instance with the custom SQLite3 dialect module
 const sequelize = new Sequelize({
