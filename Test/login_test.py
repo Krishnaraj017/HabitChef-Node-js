@@ -1,5 +1,5 @@
 import requests
-token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJrcmlzaEBnbWFpbC5jb20iLCJpYXQiOjE3MzM2NTE2MjgsImV4cCI6MTczMzY1NTIyOH0.BCl_5hCK32UaU4eefE20ejeO-NwnHHB6BbjcqCJKm_Q'
+token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJrcmlzaEBnbWFpbC5jb20iLCJpYXQiOjE3MzM4NDQ0ODcsImV4cCI6MTczMzg0ODA4N30.X3z017y3WrgfdnTB1OAXTO3HnVFrx7Vwz7BmOvizoXU'
 # URL of the login endpoint
 # Replace with your actual endpoint
 url = "http://192.168.76.25:8000/api/users/login"

@@ -1,7 +1,7 @@
 import requests
 
 # Define the endpoint URL
-url = "http://192.168.76.25:8000/api/users/createUser"
+url = "http://192.168.10.25:3000/api/users/createUser"
 
 # Define the payload (JSON data)
 payload = {
