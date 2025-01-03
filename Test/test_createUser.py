@@ -1,13 +1,13 @@
 import requests
 
 # Define the endpoint URL
-url = "http://192.168.10.25:3000/api/users/createUser"
+url = "http://192.168.201.25:3000/api/users/createUser"
 
 # Define the payload (JSON data)
 payload = {
-    "username": "Krishnaraj S",
+    "username": "Krishna",
     "password": "007",
-    "email": "krish@gmail.com"
+    "email": "krishna@gmail.com"
 }
 
 # Define the headers
