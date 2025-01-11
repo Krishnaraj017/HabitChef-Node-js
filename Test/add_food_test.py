@@ -2,10 +2,10 @@ import requests
 
 # API base URL
 # Replace with your actual API base URL
-BASE_URL = "http://192.168.201.25:3000"
+BASE_URL = "http://192.168.73.25:3000"
 
 # Endpoint and headers
-url = "http://192.168.201.25:3000/api/foods/addConsumedFood"
+url = "http://192.168.73.25:3000/api/foods/addConsumedFood"
 headers = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer",  # Replace with your JWT token

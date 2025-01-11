@@ -16,8 +16,8 @@ router.post(
   uploadMiddleware,
   searchFood
 ); //search food with image
-router.get("/foods/searchByFoodName", authenticateToken, getFoodNutrients); //get food nutrients by food name
-router.get("/foods/searchFoodNames", authenticateToken, searchFoodNames); //search food namess
-router.post("/foods/addConsumedFood",  addConsumedFood); //add consumed food
-router.get("/foods/getConsumedFoods",  getConsumedFoods); //get consumed foods
+router.post("/foods/searchByFoodName", getFoodNutrients); //get food nutrients by food name
+router.post("/foods/searchFoodNames", searchFoodNames); //search food namess
+router.post("/foods/addConsumedFood", addConsumedFood); //add consumed food
+router.post("/foods/getConsumedFoods", getConsumedFoods); //get consumed foods
 export default router;

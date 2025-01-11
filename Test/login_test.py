@@ -1,19 +1,20 @@
 import requests
-token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJrcmlzaEBnbWFpbC5jb20iLCJpYXQiOjE3MzM4NDQ0ODcsImV4cCI6MTczMzg0ODA4N30.X3z017y3WrgfdnTB1OAXTO3HnVFrx7Vwz7BmOvizoXU'
+token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJrcmlzaG5hMEBnbWFpbC5jb20iLCJpYXQiOjE3MzYwNzgxNzIsImV4cCI6MTczNjA4MTc3Mn0.YZ0ac4CHjbXk-mUyhREM9lNEcwq2LcV3IeuB6j9unFA'
 # URL of the login endpoint
 # Replace with your actual endpoint
-url = "http://192.168.201.25:3000/api/users/login"
+url = "http://192.168.1.13:3000/api/users/login"
 
 # Data to be sent in the request body
 payload = {
-    "email": "krishna@gmail.com",
-    "loginPassword": "007"
+    "email": "krishna0@gmail.com",
+    "loginPassword": "777"
 }
 
 # Headers for the request
 headers = {
-    "Content-Type": "application/json"
-}
+    # Replace <your-token> with the actual JWT token
+    "Authorization": f"Bearer {token}",
+    "Content-Type": "application/json"}
 
 # Send the POST request
 try:

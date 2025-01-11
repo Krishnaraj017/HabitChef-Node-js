@@ -4,7 +4,7 @@ import requests
 token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJrcmlzaG5hQGdtYWlsLmNvbSIsImlhdCI6MTczNTU2NzgwOSwiZXhwIjoxNzM1NTcxNDA5fQ.OHPDr0vNOVp0fti3ZWFMvAHd-kKSPo7tQbPWsOu0ixw'
 
 # URL of the API endpoint
-url = "http://192.168.201.25:3000/api/foods/searchFoodNames"
+url = "http://192.168.73.25:3000/api/foods/searchFoodNames"
 
 # Data for the request (only foodName)
 data = {

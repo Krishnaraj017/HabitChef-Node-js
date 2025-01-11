@@ -30,7 +30,7 @@ sequelize
     // await seedNutrientsDatabase();
 
     app.listen(PORT, () =>
-      console.log(`Server is running on http://192.168.201.25:${PORT}`)
+      console.log(`Server is running on http://192.168.19.25:${PORT}`)
     );
   })
   .catch((err) => console.error("Unable to connect to the database:", err));
