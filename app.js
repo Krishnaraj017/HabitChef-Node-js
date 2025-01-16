@@ -18,7 +18,7 @@ app.use(express.json()); // Now you can use json as expected
 
 // Routes
 app.use("/api", userRoutes);
-app.use("/api", foodRoutes);
+//app.use("/api", foodRoutes);
 
 const PORT = process.env.PORT || 3000;
 
@@ -30,7 +30,7 @@ sequelize
     // await seedNutrientsDatabase();
 
     app.listen(PORT, () =>
-      console.log(`Server is running on http://192.168.19.25:${PORT}`)
+      console.log(`Server is running on http://192.168.1.28:${PORT}`)
     );
   })
   .catch((err) => console.error("Unable to connect to the database:", err));
