@@ -18,7 +18,7 @@ app.use(express.json()); // Now you can use json as expected
 
 // Routes
 app.use("/api", userRoutes);
-//app.use("/api", foodRoutes);
+app.use("/api", foodRoutes);
 
 const PORT = process.env.PORT || 3000;
 

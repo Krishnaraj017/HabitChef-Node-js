@@ -1,7 +1,7 @@
 import requests
 
 # Define the endpoint URL
-url = "http://192.168.19.25:3000/api/users/createUser"
+url = "https://habit-chef-node-kxxg0n0mm-krish2.vercel.app/api/users/createUser"
 token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJrcmlzaG5hMEBnbWFpbC5jb20iLCJpYXQiOjE3MzYwNzgxNzIsImV4cCI6MTczNjA4MTc3Mn0.YZ0ac4CHjbXk-mUyhREM9lNEcwq2LcV3IeuB6j9unFA'
 
 # Define the payload (JSON data)
@@ -13,9 +13,9 @@ payload = {
 
 # Define the headers
 headers = {
-    # Replace <your-token> with the actual JWT token
     "Authorization": f"Bearer {token}",
-    "content-Type": "application/json"}
+    "Content-Type": "application/json"
+}
 
 try:
     # Make the POST request

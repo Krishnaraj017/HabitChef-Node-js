@@ -12,7 +12,7 @@ import {
 const router = express.Router();
 router.post(
   "/foods/getWithImage",
-  // authenticateToken,
+  authenticateToken,
   uploadMiddleware,
   searchFood
 ); //search food with image
