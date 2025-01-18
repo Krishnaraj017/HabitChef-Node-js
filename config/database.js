@@ -29,7 +29,7 @@ config();
 const sequelize = new Sequelize(process.env.SUPABASE_DB_URL, {
   dialect: "postgres", // Specify PostgreSQL dialect
   dialectModule: pg, // Use the pg module explicitly
-  logging: true, // Disable logging (enable if debugging is needed)
+  logging: false, // Disable logging (enable if debugging is needed)
   dialectOptions: {
     ssl: {
       require: true, // Ensure SSL connection is required

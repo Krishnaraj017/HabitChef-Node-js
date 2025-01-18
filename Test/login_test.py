@@ -1,28 +1,41 @@
 import requests
 
-token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJrcmlzaG5hMEBnbWFpbC5jb20iLCJpYXQiOjE3MzYwNzgxNzIsImV4cCI6MTczNjA4MTc3Mn0.YZ0ac4CHjbXk-mUyhREM9lNEcwq2LcV3IeuB6j9unFA'
-
 # URL of the login endpoint
-url = "https://habit-chef-node-kxxg0n0mm-krish2.vercel.app/api/users/login"
-
-# Data to be sent in the request body
+url = "http://192.168.1.28:3000/api/users/login"
+token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJrcmlzaG5hOTlAZ21haWwuY29tIiwiaWF0IjoxNzM3MTc3Mzk4LCJleHAiOjE3MzczNTAxOTh9.xd3n0AdsFj-DoehzH-wWjfRBWAp7h7Z3ZNslj03uTHE'
+# Login payload with email and password
 payload = {
-    "email": "krishna0@gmail.com",
-    "loginPassword": "777"
+    "email": "krishna99@gmail.com",
+    "loginPassword": "778"
 }
 
-# Headers for the request
+# Headers for the request (no token needed for login typically)
 headers = {
-    "Authorization": f"Bearer {token}",
+    "token": f"Bearer {token}",
+
     "Content-Type": "application/json"
 }
 
-# Send the POST request
+# Send the POST request to log in
 try:
-    response = requests.post(url, json=payload, headers=headers)
+    response = requests.post(url, json=payload, )
 
-    # Print the response status code and JSON response
-    print("Status Code:", response.status_code)
-    print("Response JSON:", response.json())
+    # Check the response status code
+    if response.status_code == 200:
+        # Successful login
+        response_data = response.json()
+        print("Login Successful!")
+        print("Response:", response_data)
+
+        # Extract token for future requests
+        token = response_data.get("token")
+        if token:
+            print("Token:", token)
+        else:
+            print("Token not found in the response.")
+    else:
+        print(f"Login failed with status code: {response.status_code}")
+        print("Error Response:", response.text)
+
 except requests.exceptions.RequestException as e:
     print("An error occurred:", e)

@@ -32,7 +32,7 @@ export const createUser = async (req, res) => {
     const token = jwt.sign(
       { id: user.id, email: user.email },
       process.env.JWT_SECRET, // Secret key
-      { expiresIn: "1h" } // Token expiry time
+      { expiresIn: "48h" } // Token expiry time
     );
 
     res.status(200).json({ message: "User created successfully", user, token });
@@ -44,6 +44,7 @@ export const createUser = async (req, res) => {
 
 // Login User
 export const login = async (req, res) => {
+  console.log(req.body)
   const { email, loginPassword } = req.body;
 
   if (!email || !loginPassword) {
