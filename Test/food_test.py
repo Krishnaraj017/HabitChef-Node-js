@@ -6,7 +6,7 @@ from pathlib import Path
 token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJrcmlzaEBnbWFpbC5jb20iLCJpYXQiOjE3MzM4NDQ0ODcsImV4cCI6MTczMzg0ODA4N30.X3z017y3WrgfdnTB1OAXTO3HnVFrx7Vwz7BmOvizoXU'
 
 # URL of the API endpoint
-url = "http://192.168.73.25:3000/api/Foods/getWithImage"
+url = "http://192.168.1.28:3000/api/Foods/getWithImage"
 
 # Relative path to the image
 image_path = Path("images/dosa.jpg")

@@ -10,12 +10,7 @@ import {
 } from "../controllers/foodController.js";
 
 const router = express.Router();
-router.post(
-  "/foods/getWithImage",
-  authenticateToken,
-  uploadMiddleware,
-  searchFood
-); //search food with image
+router.post("/foods/getWithImage", uploadMiddleware, searchFood); //search food with image
 router.post("/foods/searchByFoodName", getFoodNutrients); //get food nutrients by food name
 router.post("/foods/searchFoodNames", searchFoodNames); //search food namess
 router.post("/foods/addConsumedFood", addConsumedFood); //add consumed food
